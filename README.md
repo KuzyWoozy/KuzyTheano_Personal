@@ -45,14 +45,14 @@ There are 3 main .py files used when interacting with the feed forward neural ne
 
 ## Getting started
 
-# Minimum:
+### Minimum:
     The minmum things you can run to train and test a neural network (Using the mnist data set)
 
     python train.py -nD "20,leakyrelu|20,leakyrelu|softmax_s"
     python evaluate models/FNN.pickle
 
 
-# TRAINING:
+### TRAINING:
     In order to train a neural network, it has to be designed via the train.py
 
     Example:
@@ -78,7 +78,7 @@ There are 3 main .py files used when interacting with the feed forward neural ne
 
 
 
-# EVALUATION:
+### EVALUATION:
     After you have trained the network, you can see what scores it gets on the training data.
 
     Example:
@@ -87,7 +87,7 @@ There are 3 main .py files used when interacting with the feed forward neural ne
         
 
 
-# PREDICTION:
+### PREDICTION:
     ONLY SUPPORTED FOR CLASSIFICATION OF NUMBERS, aka images of numbers (some examples in 'tmp' directory)
 
     Once the network has been trained and has good evaluation accuracy, it can be
