@@ -19,11 +19,10 @@ various arguments, like you do with shell commands on Linux:
 
 
 Example:
-    '''
     python train.py -h
 
         This will show all the options which can be used with the train.py program
-    '''
+    
 
 There are 3 main .py files used when interacting with the feed forward neural networks:
 
@@ -46,32 +45,27 @@ There are 3 main .py files used when interacting with the feed forward neural ne
 
 ## Getting started
 
-Minimum:
+# Minimum:
     The minmum things you can run to train and test a neural network (Using the mnist data set)
 
     python train.py -nD "20,leakyrelu|20,leakyrelu|softmax_s"
     python evaluate models/FNN.pickle
 
 
-TRAINING:
-
+# TRAINING:
     In order to train a neural network, it has to be designed via the train.py
 
     Example:
-        '''
         python train.py -nD "100,leakyrelu|60,leakyrelu|softmax_s"
-
             This will create a neural network with 3 layers, with the specified sizes of neurones,
             note that the number of neurones for the last layer will be determined automatically.
-        '''
+        
         python train.py -nD "100,leakyrelu|60,leakyrelu|softmax_s" -c "mse" -r "0.0001"
-
             Will create the same network, but with a different cost function STG step value
-        '''
+       
         python train.py -nD "100,leakyrelu|90,sigmoid|80,leakyrelu|70,tanh|softmax_s"
-
             5 layered neural network 
-        '''
+        
 
         USE -h OPTION TO SEE MORE CONFGIGURABLE OPTIONS
 
@@ -84,20 +78,16 @@ TRAINING:
 
 
 
-EVALUATION:
-
+# EVALUATION:
     After you have trained the network, you can see what scores it gets on the training data.
 
     Example:
-        '''
         python evaluate.py PATH_TO_NETWORK_FILE -l test_data
-
             This will evaluate the network specified by PATH_TO_NETWORK_FILE, using the data specified by -l
-        '''
+        
 
 
-PREDICTION:
-
+# PREDICTION:
     ONLY SUPPORTED FOR CLASSIFICATION OF NUMBERS, aka images of numbers (some examples in 'tmp' directory)
 
     Once the network has been trained and has good evaluation accuracy, it can be
@@ -106,11 +96,9 @@ PREDICTION:
     by the network correctly
 
     Example:
-        '''
         python predict.py PATH_TO_NETWORK_FILE PATH_TO_IMAGE [-i]
-        '''
-        Predict the number shown on the image, via the specified network and image
-        to attempt to predict the number from
+            Predict the number shown on the image, via the specified network and image
+            to attempt to predict the number from
 
 
 
